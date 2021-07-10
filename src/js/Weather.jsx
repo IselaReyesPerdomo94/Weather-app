@@ -1,22 +1,17 @@
 import React, { useState, useEffect } from 'react';
 
-import { get } from '../api';
+import useWeather from '../hooks/getWeather';
+import css from '../styles/Weather';
 
 function Weather() {
-  const [data, setData] = useState(null);
-  useEffect(() => {
-    if(!data) {
-      const getWeather = async () => {
-        const result = await get('https://pokeapi.co/api/v2/pokemon/ditto')
-        setData(result)
-      }
-      getWeather();
-    }
-  }, []);
+  const { data, isLoading } = useWeather();
 
-  return(<section>
+  if(isLoading) {
+    return(<p>We are loading the weather</p>)
+  }
+  return(<section className={css.section}>
     <h3>Weather forecast:</h3>
-    <div>
+    <div className={css.container}>
       <p>City</p>
       <p>Current temperature</p>
       <p>Weather</p>

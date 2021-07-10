@@ -4,7 +4,7 @@ async function get(url) {
         cors: 'no-cors',
     }).catch(error => console.log(error))
 
-    return await response
+    return await response.json()
 }
 
 export { get };
