@@ -1,10 +1,13 @@
 import React from "react";
+
+import Weather from "./Weather";
 import css from "../styles/Page";
 
 function Page() {
   return (
-    <div>
+    <div className={css.container}>
       <h1> Weather </h1>
+      <Weather />
     </div>
   );
 }

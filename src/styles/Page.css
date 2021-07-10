@@ -1,4 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Quicksand:wght@300;400;500;700&display=swap');
 .container {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    height: 95vh;
+    width: 95vw;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
