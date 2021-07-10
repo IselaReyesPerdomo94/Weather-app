@@ -1,6 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+import { get } from '../api';
 
 function Weather() {
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    if(!data) {
+      const getWeather = async () => {
+        const result = await get('https://pokeapi.co/api/v2/pokemon/ditto')
+        setData(result)
+      }
+      getWeather();
+    }
+  }, []);
+
   return(<section>
     <h3>Weather forecast:</h3>
     <div>
