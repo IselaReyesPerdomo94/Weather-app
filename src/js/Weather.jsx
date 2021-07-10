@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-import useWeather from '../hooks/getWeather';
+import useWeather from '../hooks/useWeather';
 import css from '../styles/Weather';
 
 function Weather() {
