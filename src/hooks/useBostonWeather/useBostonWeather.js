@@ -3,6 +3,10 @@ import { useState, useEffect } from 'react';
 import {get } from '../../api';
 import { formatData } from './utils';
 
+/**
+ * Hook to make a request for Boston weather
+ * @returns {Object}
+ */
 function useBostonWeather() {
     const [data, setData] = useState(null);
 

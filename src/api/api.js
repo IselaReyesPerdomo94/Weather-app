@@ -1,3 +1,8 @@
+/**
+ * Function to fetch information with GET method.
+ * @param {string} url - URL to fetch.
+ * @returns {Object}
+ */
 async function get(url) {
     try {
         const response = await fetch(url)
