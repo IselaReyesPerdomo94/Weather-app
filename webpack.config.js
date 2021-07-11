@@ -1,10 +1,16 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: ['babel-polyfill', path.join(__dirname, 'src', 'js', 'app.jsx')],
     context: path.resolve(__dirname, 'src'),
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'Weather',
+        })
+    ],
     output: {
-        filename: path.join('build', 'build.js'),
+        filename: 'build.js',
         path: path.resolve(__dirname, 'build'),
         publicPath: ''
     },
