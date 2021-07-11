@@ -8,11 +8,11 @@ p {
 
 .container {
     display: grid;
-    grid-template-areas: "city city img img weather" "temperature temperature img img min";
-    padding: 1rem;
+    grid-template-areas: "city img weather" "temperature img min";
+    padding: 0.5rem;
     width: 100%;
     border: 1px solid black;
-    grid-gap: 8px;
+    grid-gap: 1rem;
 }
 
 .city {
@@ -23,6 +23,8 @@ p {
 .img {
     grid-area: img;
     width: 30%;
+    align-self: center;
+    justify-self: center;
 }
 
 .weather {
