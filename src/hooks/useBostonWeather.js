@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import {get } from '../api';
 
 
-function useWeather() {
+function useBostonWeather() {
     const [data, setData] = useState(null);
     const getWeather = async() => {
         const result = await get('https://weather-app-serverless.vercel.app/api')
@@ -20,4 +20,4 @@ function useWeather() {
     }
 }
 
-export default useWeather;
+export default useBostonWeather;

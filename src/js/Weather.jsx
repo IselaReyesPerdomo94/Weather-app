@@ -1,10 +1,10 @@
 import React from 'react';
 
-import useWeather from '../hooks/useWeather';
+import useBostonWeather from '../hooks/useBostonWeather';
 import css from '../styles/Weather';
 
 function Weather() {
-  const { data, isLoading } = useWeather();
+  const { data, isLoading } = useBostonWeather();
   console.log(data);
   if(isLoading) {
     return(<p>We are loading the weather</p>)
