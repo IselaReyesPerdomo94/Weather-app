@@ -7,7 +7,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Weather',
-            template: 'index.html'
+            template: path.resolve(__dirname, 'index.html')
         })
     ],
     output: {
