@@ -32,7 +32,6 @@ function Weather() {
       <p className={css.weather}>{weather}</p>
       <p className={css.min}>{minMaxTemp}</p>
     </div>
-    <Loader />
   </section>)
 }
 
