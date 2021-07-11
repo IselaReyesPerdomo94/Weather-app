@@ -1,13 +1,14 @@
 import React from 'react';
 
+import Loader from './components/Loader';
 import useBostonWeather from '../hooks/useBostonWeather';
 import css from '../styles/Weather';
 
 function Weather() {
   const { data, isLoading } = useBostonWeather();
-  console.log(data);
+
   if(isLoading) {
-    return(<p>We are loading the weather</p>)
+    return(<Loader />)
   }
 
   const city = data?.title;
@@ -31,6 +32,7 @@ function Weather() {
       <p className={css.weather}>{weather}</p>
       <p className={css.min}>{minMaxTemp}</p>
     </div>
+    <Loader />
   </section>)
 }
 
