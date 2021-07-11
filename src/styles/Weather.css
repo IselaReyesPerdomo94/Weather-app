@@ -2,17 +2,30 @@ p {
     margin: 0;
 }
 
+h3 {
+    align-self: baseline;
+    font-family: 'Quicksand', sans-serif;
+}
+
 .section {
-    width: 50%;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
 }
 
 .container {
     display: grid;
     grid-template-areas: "city img weather" "temperature img min";
     padding: 0.5rem;
-    width: 100%;
-    border: 1px solid black;
+    width: 50vw;
     grid-gap: 1rem;
+    background-color: white;
+    color: #1C1F24;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
 }
 
 .city {
