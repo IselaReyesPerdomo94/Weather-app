@@ -19,13 +19,15 @@ function Weather() {
   const minTemp = Math.round(consolidatedWeather?.min_temp);
   const maxTemp = Math.round(consolidatedWeather?.max_temp);
   const minMaxTemp = `${minTemp}°C - ${maxTemp}°C`;
+  const img = consolidatedWeather?.weather_state_abbr;
+  const imgURL = `https://www.metaweather.com/static/img/weather/${img}.svg`;
 
   return(<section className={css.section}>
     <h3>Weather forecast:</h3>
     <div className={css.container}>
       <p className={css.city}>{location}</p>
       <p className={css.temperature}>{temperature}</p>
-      <img className={css.img} alt='img'/>
+      <img className={css.img} alt='img' src={imgURL} />
       <p className={css.weather}>{weather}</p>
       <p className={css.min}>{minMaxTemp}</p>
     </div>
