@@ -12,10 +12,11 @@ function Weather() {
   return(<section className={css.section}>
     <h3>Weather forecast:</h3>
     <div className={css.container}>
-      <p>City</p>
-      <p>Current temperature</p>
-      <p>Weather</p>
-      <p>min and max temperature</p>
+      <p className={css.city}>City</p>
+      <p className={css.temperature}>Current temperature</p>
+      <img classsName={css.img} alt='img'/>
+      <p className={css.weather}>Weather</p>
+      <p className={css.min}>min and max temperature</p>
     </div>
   </section>)
 }
