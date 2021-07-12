@@ -1,6 +1,6 @@
 # Boston Weather app 
 
-This application fetch [MetaWeather API](https://www.metaweather.com/api/) to show the weather for a location in this case: Boston.
+This application use [MetaWeather API](https://www.metaweather.com/api/) to show the weather for a location in this case: Boston.
 All the requirements for this excercise are in Excercise.md file.
 
 ## Run this project
@@ -21,7 +21,7 @@ You can also run the test with:
 https://weather-app-lilac-psi.vercel.app/
 
 ## Challenges
-I face cors issues with the weather API, to solve it I created another [repository](https://github.com/IselaReyesPerdomo94/weather-app-serverless) to expose a serverles function. This function consumes the metaweather api using [cross-fetch](https://www.npmjs.com/package/cross-fetch) and a function take it from [vercel serverles function](https://vercel.com/support/articles/how-to-enable-cors?query=cors#understanding-cors) called allowCors.
+I faced cors issues with the weather API, to solve it I created another [repository](https://github.com/IselaReyesPerdomo94/weather-app-serverless) to expose a serverles function. This function consumes the metaweather api using [cross-fetch](https://www.npmjs.com/package/cross-fetch) and a function take it from [vercel serverles function](https://vercel.com/support/articles/how-to-enable-cors?query=cors#understanding-cors) called allowCors.
 
 With this implementation I could by pass the cors issue.
 
