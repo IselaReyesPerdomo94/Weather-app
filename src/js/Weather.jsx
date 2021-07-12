@@ -2,7 +2,7 @@ import React from 'react';
 
 import Loader from './components/Loader';
 import useBostonWeather from '../hooks/useBostonWeather';
-import css from '../styles/Weather';
+import css from '../styles/Weather.css';
 
 function Weather() {
   const { data, isLoading } = useBostonWeather();
