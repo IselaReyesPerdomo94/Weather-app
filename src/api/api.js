@@ -1,3 +1,4 @@
+import fetch from 'node-fetch';
 /**
  * Function to fetch information with GET method.
  * @param {string} url - URL to fetch.

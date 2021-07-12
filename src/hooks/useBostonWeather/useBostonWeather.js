@@ -10,16 +10,22 @@ import { formatData } from './utils';
 function useBostonWeather() {
     const [data, setData] = useState(null);
 
-    const getWeather = async() => {
-        const result = await get('https://weather-app-serverless.vercel.app/api');
-        setData(result)
-    }
 
     useEffect(() => {
+        // To not set the data if the component is not mounted.
+        let mounted = true;
         if (!data) {
+
+            const getWeather = async() => {
+                const result = await get('https://weather-app-serverless.vercel.app/api');
+                if (mounted) {
+                    setData(result)
+                }
+            }
             getWeather();
         }
-    }, []);
+        return () => mounted = false;
+    }, [data]);
 
     const result = data?.parent?.title && formatData(data);
 

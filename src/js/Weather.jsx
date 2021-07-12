@@ -2,7 +2,7 @@ import React from 'react';
 
 import Loader from './components/Loader';
 import useBostonWeather from '../hooks/useBostonWeather';
-import css from '../styles/Weather';
+import css from '../styles/Weather.css';
 
 function Weather() {
   const { data, isLoading } = useBostonWeather();
@@ -22,7 +22,7 @@ function Weather() {
     minMaxTemp,
     imgURL} = data; 
 
-  return(<section className={css.section}>
+  return (<section className={css.section}>
     <h3>Weather forecast:</h3>
     <div className={css.container}>
       <p className={css.city}>{location}</p>
