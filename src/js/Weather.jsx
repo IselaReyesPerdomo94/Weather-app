@@ -22,7 +22,7 @@ function Weather() {
     minMaxTemp,
     imgURL} = data; 
 
-  return(<section className={css.section}>
+  return (<section className={css.section}>
     <h3>Weather forecast:</h3>
     <div className={css.container}>
       <p className={css.city}>{location}</p>

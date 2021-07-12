@@ -1,10 +1,6 @@
-/**
- * @jest-environment jsdom
- */
-import '@testing-library/jest-dom';
 import React from 'react';
 import { rest } from 'msw';
-import { render, waitFor, screen } from '@testing-library/react'
+import { render, screen, waitFor } from '@testing-library/react'
 
 import { server } from '../../msw/server';
 import Weather from '../Weather';
@@ -30,7 +26,7 @@ describe('Weather', () => {
     await waitFor(() => {
       expect(screen.queryByTestId('loader')).not.toBeInTheDocument();
     })
-    
+
     expect(container.getByText('Weather forecast:')).toBeInTheDocument();
     expect(container.getByText('Boston, Massachusetss')).toBeInTheDocument();
   });
